@@ -43,7 +43,7 @@ export const navLinks = [
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Objective",
   },
   {
     id: "project",
@@ -61,11 +61,11 @@ const services = [
     icon: mobile,
   },
   {
-    title: "DevOps Engineer",
+    title: "Data Analysis",
     icon: backend,
   },
   {
-    title: "Software Engineer",
+    title: "Data Scientist",
     icon: creator,
   },
 ];
@@ -76,35 +76,35 @@ const technologies = [
     icon: html,
   },
   {
-    name: "CSS 3",
+    name: "Azure",
     icon: css,
   },
   {
-    name: "JavaScript",
+    name: "Power BI",
     icon: javascript,
   },
   {
-    name: "TypeScript",
+    name: "Anaconda",
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: "Kafka",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: "Ubuntu-linux",
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
+    name: "IBM",
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: "Hadoop EcoSystem",
     icon: nodejs,
   },
   {
-    name: "MongoDB",
+    name: "Apache Spark",
     icon: mongodb,
   },
   // {
@@ -146,7 +146,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2023 - entire life",
     points: [
-      "Learning DevOps, Data engineer...",
+      "Learning DataScience, Data engineer...",
       "Earn Certification.",
       "Doing projects.",
     ],
@@ -156,9 +156,9 @@ const experiences = [
     company_name: "Participating in competitions, obtaining internships, and displaying my abilities... ",
     icon: shopify,
     iconBg: "#383E56",
-    date: "october 2023",
+    date: "August 2024",
     points: [
-      "Joining some competitions about data science, devOps...etc",
+      "Joining some competitions about data science, BigData...etc",
       "Searching for internships Opportunities.",
       "Building myself more professionally.",
       // "Participating in code reviews and providing constructive feedback to other developers.",
@@ -182,31 +182,81 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.",
-    name: "Charles Darwin",
-    // designation: "CTO",
-    // company: "456 Enterprises",
-    image: "https://th.bing.com/th/id/OIP.psEkZ30gGcpxVF5Jq8dsEgHaJQ?pid=ImgDet&w=600&h=750&rs=1",
+      "IBM Data Engineering",
+    name: "Huy Trao",
+    designation: "Data Engineer",
+    company: "Coursera",
+    image: "https://github.com/user-attachments/assets/cc089dac-b9cd-4623-bf6b-631190b33760",
   },
   {
     testimonial:
-      "The only way to do great work is to love what you do.",
-    name: "Steve Jobs",
-    // designation: "CFO",
-    // company: "Acme Co",
-    image: "https://cdn3.vox-cdn.com/thumbor/7S8n1XL0IChDdcoEug7cP_qBnV0=/0x104:438x396/1280x854/cdn0.vox-cdn.com/imported_assets/846325/steve-jobs-1.jpg",
+      "Microsoft Azure Data Engineering Associate (DP-203)",
+    name: "Huy Trao",
+    designation: "Data Engineer",
+    company: "Coursera",
+    image: "https://github.com/user-attachments/assets/81b284a3-9523-4b0c-b773-73a5899ebe16",
   },
   {
     testimonial:
-      "Life is inherently unfair - get used to it                                                                           ",
-    name: "Bill Gates,",
-    // designation: "COO",
-    // company: "DEF Corp",
-    image: "https://content.fortune.com/wp-content/uploads/2020/09/CNV.10.20.FORTUNE_BILL_AND_MELINDA_GATES_030.jpg",
+      "IBM Data Warehouse Engineer",
+    name: "Huy Trao",
+    designation: "Data Engineer",
+    company: "Coursera",
+    image: "https://github.com/user-attachments/assets/515d2ea1-8321-4995-81b0-d80273c86214",
   },
+  {
+    testimonial:
+      "Hands-on Introduction to Linux Commands and Shell Scripting",
+    name: "Huy Trao",
+    designation: "Ubuntu",
+    company: "Coursera",
+    image: "https://github.com/user-attachments/assets/f576dce1-1194-4f5a-8240-65106d1920c9",
+  },
+  {
+    testimonial:
+      "AI for Everyone",
+    name: "Huy Trao",
+    designation: "Deepleanring",
+    company: "Coursera",
+    image: "https://github.com/user-attachments/assets/e7bbfc1d-85e0-4aa6-b18a-4eddce6201bf",
+  },
+
 ];
 
 const projects = [
+  {
+    name: "Predict House Real Estate Price in Ho Chi Minh City",
+    description:
+      " By analyzing historical sales data, property features, and neighborhood characteristics, the goal is to create an accurate forecasting tool for real estate values.",
+    tags: [
+      {
+        name: "Machine Learning model",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "llm",
+        color: "green-text-gradient",
+      },
+       {
+        name: "EDA",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Group Project",
+        color: "grey-text-gradient",
+      },
+      {
+        name: "Crawl data",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Heatmap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "https://github.com/user-attachments/assets/43ffbe9a-d9c5-4f92-b7ca-31bc471dc822",
+    source_code_link: "https://github.com/huytrao/Realestate-DataScience-PredictHousePrice",
+  },
   {
     name: "Simple Pipeline Using Azure",
     description:
@@ -224,52 +274,16 @@ const projects = [
         name: "powerBI",
         color: "pink-text-gradient",
       },
+      {
+        name: "Personal Project",
+        color: "grey-text-gradient",
+      },
+
     ],
     image: carrent,
     source_code_link: "https://github.com/huytrao/build-simple-pipeline-realtime-with-Azure-data-engineer-project",
   },
-  // {
-  //   name: "Job IT",
-  //   description:
-  //     "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "restapi",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "scss",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: jobit,
-  //   source_code_link: "https://github.com/",
-  // },
-  // {
-  //   name: "Trip Guide",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: tripguide,
-  //   source_code_link: "https://github.com/",
-  // },
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };

@@ -49,7 +49,7 @@ const About = () => {
   variants={fadeIn("", "", 0.1, 1)}
   className="custom-background mt-4 text-black text-[17px] max-w-3xl leading-[30px]"
 >
-  Within the next 5 years, I want to become an expert in the field of big data engineering, DevOps, learn more, and accumulate more to create more value for myself and the community, as well as make many of the most useful values for the company and learn how to use data to develop the company in a lean, compact, and strong direction
+I want to develop my career in Big Data and become an expert in this field. I truly see the potential in it, and I realize that the only obstacle is myself.
 </motion.p>
 
 

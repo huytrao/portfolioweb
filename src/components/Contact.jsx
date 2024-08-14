@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -60,69 +60,81 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`xl:mt-20 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
-            <textarea
-              rows={7}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What do you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
-      </motion.div>
+      
 
       <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
+  variants={slideIn("right", "tween", 0.2, 1)}
+  className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+>
+  <div style={{ color: '#E0E0E0', padding: '20px', borderRadius: '10px' }}>
+    <h2 align="center" style={{ color: '#FFD700', fontSize: '2.5rem', marginBottom: '20px' }}>Huytrao's Skill Objective in the Big Data Area</h2>
+    <div align="left">
+      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Programming Skills:</strong>
+          <ul style={{ listStyleType: 'circle', marginLeft: '20px' }}>
+            <li><strong>Python & R:</strong> Popular languages for data analysis with extensive libraries like Pandas, NumPy, and Scikit-learn.</li>
+          </ul>
+        </li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Database Knowledge:</strong>
+          <ul style={{ listStyleType: 'circle', marginLeft: '20px' }}>
+            <li><strong>SQL:</strong> Essential for working with relational databases (RDBMS) like MySQL, PostgreSQL.</li>
+            <li><strong>NoSQL:</strong> Proficiency in NoSQL databases like MongoDB, Cassandra for handling unstructured data.</li>
+          </ul>
+        </li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Distributed Data Processing:</strong>
+          <ul style={{ listStyleType: 'circle', marginLeft: '20px' }}>
+            <li><strong>Apache Hadoop:</strong> Knowledge of Hadoop ecosystem including HDFS, MapReduce.</li>
+            <li><strong>Apache Spark:</strong> Expertise in Spark for fast and efficient data processing, especially with large datasets.</li>
+          </ul>
+        </li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Real-time Data Processing:</strong>
+          <ul style={{ listStyleType: 'circle', marginLeft: '20px' }}>
+            <li><strong>Apache Kafka:</strong> Proficiency in Kafka for real-time data streaming and analysis.</li>
+            <li><strong>Apache Flink:</strong> Use Flink for flexible and efficient stream processing.</li>
+          </ul>
+        </li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Data Science & Analytics:</strong>
+          <ul style={{ listStyleType: 'circle', marginLeft: '20px' }}>
+            <li><strong>Machine Learning & AI:</strong> Understanding of ML, deep learning models, and their applications in big data analysis.</li>
+            <li><strong>Data Visualization:</strong> Skills in tools like Tableau, Power BI for clear and effective data communication.</li>
+          </ul>
+        </li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Cloud Computing:</strong>
+          <ul style={{ listStyleType: 'circle', marginLeft: '20px' }}>
+            <li><strong>IBM, Azure:</strong> Ability to deploy and manage big data solutions on cloud platforms.</li>
+          </ul>
+        </li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Data Security:</strong>
+          <ul style={{ listStyleType: 'circle', marginLeft: '20px' }}>
+            <li><strong>Data Governance:</strong> Understanding of data governance and protection, including compliance with regulations like GDPR, CCPA.</li>
+            <li><strong>Encryption:</strong> Skills in data encryption to ensure secure data storage and transmission.</li>
+          </ul>
+        </li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Analytical & Problem-Solving Skills:</strong> Ability to analyze, think logically, and devise creative solutions to challenges in big data management and analysis.</li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Soft Skills:</strong>
+          <ul style={{ listStyleType: 'circle', marginLeft: '20px' }}>
+            <li><strong>Communication:</strong> Effective communication skills for collaboration with various stakeholders.</li>
+            <li><strong>Teamwork:</strong> Ability to work in teams on complex projects involving multiple departments.</li>
+          </ul>
+        </li>
+        <li>
+          <strong style={{ color: '#00BFFF' }}>Continuous Learning:</strong> Keeping up with the rapidly evolving big data landscape and continuously learning new technologies.</li>
+      </ul>
+    </div>
+  </div>
+</motion.div>
+
     </div>
   );
 };
