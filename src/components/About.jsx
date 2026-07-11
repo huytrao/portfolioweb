@@ -1,5 +1,4 @@
 import React from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -7,34 +6,14 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-
-
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
-
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
+  <motion.div
+    variants={fadeIn("up", "spring", index * 0.2, 0.6)}
+    className="card xs:w-[240px] w-full py-10 px-8 flex flex-col items-center gap-5"
+  >
+    <img src={icon} alt={title} className="w-12 h-12 object-contain" />
+    <h3 className="text-ink text-[17px] font-semibold text-center">{title}</h3>
+  </motion.div>
 );
 
 const About = () => {
@@ -42,30 +21,28 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} custom-color`}>Overview</h2>
+        <h2 className={styles.sectionHeadText}>About me.</h2>
       </motion.div>
 
       <motion.p
-  variants={fadeIn("", "", 0.1, 1)}
-  className="custom-background mt-4 text-black text-[17px] max-w-3xl leading-[30px]"
->
-I want to develop my career in Big Data and become an expert in this field. I truly see the potential in it, and I realize that the only obstacle is myself.
-</motion.p>
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-6 text-secondary text-[19px] max-w-3xl leading-[1.6]"
+      >
+        I&rsquo;m an AI Engineer and Data Science graduate (GPA 3.5/4.0) with
+        hands-on experience across deep learning research, robotics systems
+        engineering, and production AI deployment. Selected for the Vingroup AI
+        in Action program, I&rsquo;ve built everything from a VDA 5050 AMR
+        acceptance test bench on ROS 2 and Google Cloud to multimodal fusion
+        research and production ML systems serving real-time inference.
+      </motion.p>
 
-
-      <div className="mt-20 flex flex-wrap gap-10">
-        {/* {services.map((service, index) => (
+      <div className="mt-16 flex flex-wrap gap-6 justify-center">
+        {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
-        ))} */}
-        <div className="about-container mt-20 flex flex-wrap gap-10">
-  {services.map((service, index) => (
-    <ServiceCard key={service.title} index={index} {...service} />
-  ))}
-</div>
+        ))}
       </div>
     </>
   );
 };
 
 export default SectionWrapper(About, "about");
-

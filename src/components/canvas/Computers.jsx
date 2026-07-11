@@ -9,12 +9,13 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="white" />
+      <hemisphereLight intensity={0.6} groundColor="white" />
+      <ambientLight intensity={0.5} />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
-        intensity={1}
+        intensity={1.4}
         castShadow
         shadow-mapSize={1024}
       />

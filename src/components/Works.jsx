@@ -1,57 +1,37 @@
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github1 } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, description, tags, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full"
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.15, 0.6)}
+      className="card p-8 sm:w-[360px] w-full flex flex-col"
+    >
+      <h3 className="text-ink font-semibold text-[20px] tracking-tight">
+        {name}
+      </h3>
+      <p className="mt-3 text-secondary text-[15px] leading-[1.6] flex-1">
+        {description}
+      </p>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span key={tag.name} className="text-[13px] text-secondary">
+            #{tag.name}
+          </span>
+        ))}
+      </div>
+      <a
+        href={source_code_link}
+        target="_blank"
+        rel="noreferrer"
+        className="cta-link mt-5 text-[15px]"
       >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank.com")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github1}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-        <div  className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
+        View on GitHub &rsaquo;
+      </a>
     </motion.div>
   );
 };
@@ -59,41 +39,20 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-   
-      <motion.div  variants={textVariant()}>
-        <p  className={styles.sectionSubText}></p>
-        <h2  id="project" className={`${styles.sectionHeadText} myProject`}>Projects.</h2>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Selected work</p>
+        <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
-    
-      {/* <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          Below, you'll find a selection of projects that demonstrate my skills
-          and expertise through tangible examples of my work. Each project comes
-         with a concise description, along with links to the code repositories and
-          live demos. These showcase my proficiency in tackling intricate problems,
-           proficiency with diverse technologies, and effective project management
-        </motion.p>
-      </div> */}
-      <div className="container">
-  <div className="content">
-    <motion.p
-      variants={fadeIn("", "", 0.1, 1)}
-      className="text"
-    >
-      Below, you'll find a selection of projects that demonstrate my skills
-      and expertise through tangible examples of my work. Each project comes
-      with a concise description, along with links to the code repositories and
-      live demos. These showcase my proficiency in tackling intricate problems,
-      proficiency with diverse technologies, and effective project management
-    </motion.p>
-  </div>
-</div>
 
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-6 text-secondary text-[17px] max-w-3xl leading-[1.6]"
+      >
+        From robotics acceptance testing to production AI platforms — each
+        project below links to its repository.
+      </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-16 flex flex-wrap gap-6">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
@@ -102,4 +61,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "project");
