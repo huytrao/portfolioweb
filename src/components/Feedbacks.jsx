@@ -10,11 +10,13 @@ const FeedbackCard = ({ index, testimonial, designation, company, image }) => (
     variants={fadeIn("up", "spring", index * 0.15, 0.6)}
     className="card p-8 xs:w-[300px] w-full text-center"
   >
-    <img
-      src={image}
-      alt={testimonial}
-      className="mx-auto w-full h-auto rounded-xl object-cover"
-    />
+    {image && (
+      <img
+        src={image}
+        alt={testimonial}
+        className="mx-auto w-full h-auto rounded-xl object-cover"
+      />
+    )}
     <p className="text-ink font-semibold text-[16px] mt-5 tracking-tight">
       {testimonial}
     </p>

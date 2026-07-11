@@ -31,7 +31,11 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import github1 from "./github1.png";
 import UofS from "./UofS.png";
+import aiBootcampCert from "./ai-bootcamp-cert.png";
+import vingroup from "./company/vingroup.png";
 export {
+  aiBootcampCert,
+  vingroup,
   logo,
   backend,
   creator,

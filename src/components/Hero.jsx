@@ -4,13 +4,13 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto bg-primary">
+    <section className="relative w-full h-screen mx-auto bg-primary flex flex-col">
       <div
-        className={`absolute inset-0 top-[120px] max-w-5xl mx-auto ${styles.paddingX} flex flex-col items-center text-center gap-5`}
+        className={`pt-[110px] max-w-5xl mx-auto ${styles.paddingX} flex flex-col items-center text-center gap-5`}
       >
         <h1 className={styles.heroHeadText}>Trao An Huy</h1>
         <p className={`${styles.heroSubText} max-w-2xl`}>
-          Data engineering. Done simply.
+          AI engineering. Done simply.
         </p>
         <div className="flex items-center gap-8 mt-2">
           <a href="#work" className="cta-button">
@@ -35,10 +35,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      <div className="flex-1 min-h-0 w-full">
+        <ComputersCanvas />
+      </div>
 
-      <div className="absolute bottom-8 w-full flex justify-center items-center">
-        <a href="#about" aria-label="Scroll to about">
+      <div className="absolute bottom-4 w-full flex justify-center items-center pointer-events-none">
+        <a href="#about" aria-label="Scroll to about" className="pointer-events-auto">
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, repeatType: "loop" }}

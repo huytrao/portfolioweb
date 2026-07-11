@@ -4,7 +4,8 @@ import {
   creator,
   web,
   UofS,
-  meta,
+  aiBootcampCert,
+  vingroup,
 } from "../assets";
 
 export const navLinks = [
@@ -68,7 +69,7 @@ const experiences = [
   {
     title: "AI Engineer Trainee",
     company_name: "Vingroup AI in Action",
-    icon: meta,
+    icon: vingroup,
     iconBg: "#f5f5f7",
     date: "May 2026 – Aug 2026",
     points: [
@@ -125,6 +126,13 @@ const testimonials = [
     company: "Coursera",
     image:
       "https://github.com/user-attachments/assets/f576dce1-1194-4f5a-8240-65106d1920c9",
+  },
+  {
+    testimonial: "AI Engineer Bootcamp",
+    name: "Huy Trao",
+    designation: "AI Engineer",
+    company: "Udemy · 2025",
+    image: aiBootcampCert,
   },
   {
     testimonial: "AI for Everyone",
